@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello</title>
+		<meta http-equiv="content-type" content="text/html; charset-utf-8">
+		<style type="text/css">
+			body{ background-color: #71b4f6}
+		</style>
+	</head>
+	
+	<body>
+		<h1>Main Page</h1>
+		<p><i style="font-size: 64px">Test shell for HTML <br> on Android desu</p>
+		
+		
+	<script language="JavaScript">
+		function fTime(){
+			var d = document;
+			var t = new Date();
+			var h = t.getHours();
+			var m = t.getMinutes();
+			var s = t.getSeconds();
+			var res = "";
+			
+			if(h < 10)
+				res += "0" + h;
+			else
+				res += h;
+				
+			if(m < 10)
+				res += ":0" + m;
+			else
+				res += ":" + m;
+				
+			if(s < 10)
+				res += ":0" + s;
+			else
+				res += ":" + s;
+			d.form1.rest.value = res;
+		}
+		
+		
+		
+		function fDate(){
+			var doc = document;
+			var dat = new Date();
+			var y = dat.getFullYear();
+			var mon = dat.getMonth() + 1;
+			var day = dat.getDate();
+			var _date = "";
+			_date += day + ".";
+			_date += mon + ".";
+			_date += y;
+			doc.form2.rest2.value = _date;
+		}
+	</script>
+		
+		
+		
+		<form name="form1">
+			<input type="text" size=8 style="font-size: 64px" name="rest"><i style="font-size: 64px">Time</i>
+		</form>
+		<form name="form2">
+			<input type="text" size=8 style="font-size: 64px" name="rest2"><i style="font-size: 64px">Date</i><br><br>
+			<input type="button" style="width: 200px; font-size: 64px; font-style: bolder;" value="Time" onClick="fTime(), fDate()">
+		</form>
+		
+		
+		
+		
+	</body>
+	
+</html>
